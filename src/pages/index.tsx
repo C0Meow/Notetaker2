@@ -2,10 +2,8 @@ import { type NextPage } from "next";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 import { api, type RouterOutputs } from "~/utils/api";
 import { Header } from "~/components/Header";
-import { undefined } from "zod";
 import { NoteEditor } from "~/components/NoteEditor";
 import { NoteCard } from "~/components/NoteCard";
 
