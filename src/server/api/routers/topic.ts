@@ -7,8 +7,7 @@ import {
 
 export const topicRouter = createTRPCRouter({
   getAll: protectedProcedure
-    .input(z.object({ userId: z.string() }))
-    .query(({ ctx, input }) => {
+    .query(({ ctx }) => {
       return ctx.prisma.topic.findMany({
         where: {
           userId: ctx.session.user.id,
